@@ -24,11 +24,18 @@ delta = Airline.create(name: "Delta")
 AirlineConnection.create(connection: nytomia, airline: jet_blue, price: 335.00)
 AirlineConnection.create(connection: nytola, airline: jet_blue, price: 245.00)
 AirlineConnection.create(connection: nytomi, airline: jet_blue, price: 330.00)
+AirlineConnection.create(connection: nytosf, airline: jet_blue, price: 300.00)
 
 AirlineConnection.create(connection: nytomia, airline: spirit, price: 135.00)
 AirlineConnection.create(connection: nytola, airline: spirit, price: 145.00)
 AirlineConnection.create(connection: nytomi, airline: spirit, price: 130.00)
+AirlineConnection.create(connection: nytosf, airline: spirit, price: 150.00)
 
 AirlineConnection.create(connection: nytomia, airline: delta, price: 315.00)
 AirlineConnection.create(connection: nytola, airline: delta, price: 255.00)
 AirlineConnection.create(connection: nytomi, airline: delta, price: 280.00)
+AirlineConnection.create(connection: nytosf, airline: delta, price: 260.00)
+
+
+
+bob = Traveller.create(name: "Bob", username: "big_bob", password: "12345")

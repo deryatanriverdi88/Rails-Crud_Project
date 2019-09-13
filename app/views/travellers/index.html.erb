@@ -1,0 +1,15 @@
+
+
+  <p class="logout-message"><% if flash[:message] %>
+  <% flash[:message].each do |message| %>
+  <%= message %>
+  <%end%>
+  <% else %>
+  <%= "Taking care of all your travel needs!" %>
+  <% end %>
+  </p>
+
+
+<% if session[:traveller_id] %>
+<%= link_to "See your profile", traveller_path(session[:traveller_id]) %>
+<% end %>

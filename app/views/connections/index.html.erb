@@ -1,0 +1,10 @@
+<%= form_tag("/connections/choose") do %>
+<p> Departure  <%= select_tag "chosen_connection", options_from_collection_for_select(Connection.all, "id", "location_1") %>
+  <%= submit_tag "See Option" %>
+<% end %>
+
+<%= form_for @connection do |f| %>
+<%= f.label :connection %>
+<%= f.collection_select(:connection_id, Connection.all, :id, :location_1) %>
+<%= f.submit "Submit" %>
+<% end %>

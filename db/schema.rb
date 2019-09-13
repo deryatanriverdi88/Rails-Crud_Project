@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 2019_09_09_201104) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "date"
-    t.bigint "airline_id"
-    t.bigint "traveler_id"
+    t.bigint "connection_id"
+    t.bigint "traveller_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["airline_id"], name: "index_bookings_on_airline_id"
-    t.index ["traveler_id"], name: "index_bookings_on_traveler_id"
+    t.index ["connection_id"], name: "index_bookings_on_connection_id"
+    t.index ["traveller_id"], name: "index_bookings_on_traveller_id"
   end
 
   create_table "connections", force: :cascade do |t|
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2019_09_09_201104) do
   create_table "travellers", force: :cascade do |t|
     t.string "name"
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

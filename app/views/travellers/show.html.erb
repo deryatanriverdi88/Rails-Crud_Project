@@ -1,0 +1,24 @@
+  <% if flash[:errors] %>
+  <% flash[:errors].each do |error|  %>
+  <%= error %>
+  <% end %>
+  <% end %>
+
+<div class="traveller-show-page">
+<% if !@traveller.bookings.empty?  %>
+<p class="flights"> <%= "Here are all your booked flights 🛩:"%></p>
+
+  <% @traveller.bookings.each do |booking| %>
+    <li><%= link_to "#{booking.connection.booking_details} on #{booking.date}", booking_path(booking) %></li>
+  <% end %>
+<% else %>
+<p><%= "You have no flights!" %></p>
+
+
+<% end %>
+
+<div class="link-to-airline-connection">
+<%= link_to "See all flights", airline_connections_path %>
+</div>
+
+</div>

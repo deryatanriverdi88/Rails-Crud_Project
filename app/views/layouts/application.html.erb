@@ -7,9 +7,33 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
   </head>
 
   <body>
+  <div class="clearfix">
+    <div class="menu-bar">
+      <div class="log-out">
+    <% if session[:traveller_id] %>
+       <%= button_to "Log-out", logout_path, method: :delete %>
+    <% end %>
+    </div>
+
+    <% unless session[:traveller_id] %>
+       <%= link_to "Click here to Log-in", new_login_path %>
+       <%= link_to "Click here to Sign-up", new_traveller_path %>
+    <% end %>
+    </div>
+  </div>
+
+    <% if session[:traveller_id] %>
+      <h1>Welcome to BD Travel App <span style="color:red"> <%= Traveller.find(session[:traveller_id]).name %> <span></h1>
+      <%  else %>
+        <h1>Welcome to BD Travel App</h1>
+      <% end %>
+
+
     <%= yield %>
   </body>
 </html>

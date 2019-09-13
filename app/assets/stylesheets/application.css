@@ -1,15 +1,186 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ @import "compass/css3";
+@import 'https://fonts.googleapis.com/css?family=Kreon:300,700';
+
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+ body{
+   font-family: 'Quicksand', sans-serif;
+   margin: 0 auto;
+   text-align: center;
+   background-image: url(capadocia.jpeg);
+   background-position: center;
+   background-repeat: no-repeat;
+
+   height: 100vh;
+   font-weight: bold;
+ }
+
+
+div.menu-bar,
+ .log-out .button_to input{
+ background-color: #eed;
+ box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+ border-radius: 15px;
+}
+
+ div.menu-bar {
+width:80vw;
+height:60px;
+margin: 40px auto;
+background-image: url(pink-plane.gif);
+background-position: center; */
+background-repeat: no-repeat;
+
+ }
+
+ .menu-bar a{
+   display: inline-block;
+   width: 40%;
+   padding: 10px;
+   color:rgb(41, 68, 186);
+   text-shadow: 1px 1px rgb(39, 40, 46);
+   font-size: 25px;
+ }
+
+ .menu-bar a:hover,
+ log-out .button_to input{
+   color:rgb(39, 40, 46);
+   text-shadow: 1px 1px rgb(240, 241, 247);
+  border-radius: 10px;
+  animation-name: example;
+  animation-duration: 0.25s;
+  border-left: 8px solid rgba(31, 56, 49, 0.2);
+  box-shadow: 0 14px 28px rgba(31, 56, 49, 0.5), 0 10px 10px rgba(31, 56, 49, 0.5);
+
+ }
+
+ .log-out .button_to input{
+   display: inline-block;
+   width:10%;
+   float:right;
+   height: 20px;
+   text-align: center;
+   margin:12px;
+   background-color: rgba(62, 102, 189, 0.2)
+ }
+
+ a{
+   text-decoration: none;
+ }
+
+ li{
+   list-style: none;
+ }
+
+
+h1{
+  padding-top:45px;
+  font-family: 'Bad Script', cursive;
+  font-size: 55px;
+  color:rgb(8, 115, 77);
+  text-shadow: 2px 2px rgb(240, 241, 247);
+  letter-spacing: 4px;
+}
+
+div.login ul li label{
+  margin:15px;
+}
+
+
+div.login ul li input{
+  margin:15px;
+  height:25px;
+}
+
+div.login ul li input:hover{
+  background: linear-gradient(156deg, #eae3bc, #5d9934, #d41489);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 33s ease infinite;
+  -moz-animation: AnimationName 33s ease infinite;
+  animation: AnimationName 33s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:50% 0%}
+      50%{background-position:51% 100%}
+      100%{background-position:50% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:50% 0%}
+      50%{background-position:51% 100%}
+      100%{background-position:50% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:50% 0%}
+      50%{background-position:51% 100%}
+      100%{background-position:50% 0%}
+  }
+}
+
+
+div.login span.submit input{
+  color:red;
+  display: inline-block;
+  width: 240px;
+  margin-left:10px;
+  font-size: 25px;
+}
+
+div.login ul{
+  margin: 0 auto;
+  padding: 15px;
+
+}
+
+div.new-traveller{
+  background-color: rgba(132, 156, 173, 0.7);
+  width: 80vw;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+.traveller-show-page, div.login, .logout-message, .traveller-booking, .all-flights{
+  height:auto;
+  margin:0 auto;
+  padding:15px;
+  width: 30vw;
+  border-radius: 15px;
+  background-color: rgba(132, 156, 173, 0.7);
+  box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+  border-radius: 15px;
+}
+
+.traveller-show-page p.flights {
+  color:rgb(8, 115, 77);
+  font-size: 22px;
+  padding: 2px;
+  margin: 5px auto;
+  text-shadow: 1px 1px rgb(240, 241, 247);
+}
+
+.traveller-show-page li a:hover,
+.link-to-airline-connection a:hover{
+  color:rgb(167, 232, 227);
+}
+
+.link-to-airline-connection{
+  box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+  border-radius: 15px;
+  margin:20px auto 10px;
+  height:30px;
+  text-align: center;
+  padding:3px;
+}
+
+.logout-message{
+  color:white;
+}
+
+.select-button select{
+  width:275px;
+}

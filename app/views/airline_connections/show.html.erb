@@ -1,0 +1,20 @@
+
+<h1>Airline Show Page</h1>
+
+<%= "Airline: #{@airline_connection.airline.name} Departure: #{@airline_connection.connection.location_1}, Arrival: #{@airline_connection.connection.location_2} Price: $#{@airline_connection.price}"%>
+<br>
+
+<%=form_for @booking do |f| %>
+
+  <%= f.hidden_field :traveller_id, value: session[:traveller_id] %>
+
+  <%=  f.hidden_field :connection_id, value: @airline_connection.connection_id%>
+
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.submit "Create Booking" %>
+<% end %>
+
+
+<%= link_to "Go back to see other flights", airline_connections_path %>

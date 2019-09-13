@@ -1,0 +1,9 @@
+
+<div class="all-flights">
+<%= form_tag("/airline_connections/choose") do %>
+<p class="select-button"> Select flight<%= select_tag "chosen_airline_connection", options_from_collection_for_select(AirlineConnection.all, "id", "full_connection" ) %> </p>
+  <%= submit_tag "See Option" %>
+<% end %>
+
+<%= link_to "Go back to your profile", traveller_path(session[:traveller_id]) %>
+</div>

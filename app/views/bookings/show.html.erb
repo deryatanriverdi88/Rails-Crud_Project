@@ -1,0 +1,10 @@
+<div class="traveller-booking">
+
+<%= "#{@booking.connection.full_connection} on #{@booking.date}" %>
+
+<%= button_to "Delete this Booking", @booking, method: :delete %>
+
+<% if session[:traveller_id] %>
+<%= link_to "See your profile", traveller_path(session[:traveller_id]) %>
+<% end %>
+</div>
