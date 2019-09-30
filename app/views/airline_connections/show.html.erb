@@ -1,6 +1,5 @@
 
-<h1>Airline Show Page</h1>
-
+<div class="select-flight">
 <%= "Airline: #{@airline_connection.airline.name} Departure: #{@airline_connection.connection.location_1}, Arrival: #{@airline_connection.connection.location_2} Price: $#{@airline_connection.price}"%>
 <br>
 
@@ -18,3 +17,4 @@
 
 
 <%= link_to "Go back to see other flights", airline_connections_path %>
+</div>

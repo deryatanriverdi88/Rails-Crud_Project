@@ -144,7 +144,7 @@ div.new-traveller{
 }
 
 
-.traveller-show-page, div.login, .logout-message, .traveller-booking, .all-flights{
+.traveller-show-page, div.login, .logout-message, .traveller-booking, .all-flights, .select-flight{
   height:auto;
   margin:0 auto;
   padding:15px;
